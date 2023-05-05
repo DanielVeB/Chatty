@@ -1,0 +1,37 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+  
+  /* Header */
+  #header {
+    flex-shrink: 0;
+    height: 60px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Content */
+  #content {
+    flex-grow: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Footer */
+  #footer {
+    flex-shrink: 0;
+    height: 0px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
