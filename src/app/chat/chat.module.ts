@@ -2,12 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ChatComponent } from './chat.component';
 import { ChatRoutingModule } from './chat-routing.module';
+import { NavigationComponent } from './navigation/navigation.component';
+import { ContentComponent } from './content/content.component';
 
 
 
 @NgModule({
   declarations: [
-    ChatComponent
+    ChatComponent,
+    NavigationComponent,
+    ContentComponent
   ],
   imports: [
     CommonModule,
@@ -15,4 +19,6 @@ import { ChatRoutingModule } from './chat-routing.module';
   ],
   exports: []
 })
-export class ChatModule { }
+export class ChatModule { 
+
+}

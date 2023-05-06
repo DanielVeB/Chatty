@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AdminComponent } from './admin.component';
 import { AdminRoutingModule } from './admin-routing.module';
 
-
+console.log("Admin module loaded")
 @NgModule({
   declarations: [
     AdminComponent
@@ -13,4 +13,5 @@ import { AdminRoutingModule } from './admin-routing.module';
     AdminRoutingModule
   ]
 })
-export class AdminModule { }
+export class AdminModule {
+}

@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class ChatComponent {
 
+  navHidden = false;
+
+  toggleNav() {
+    this.navHidden = !this.navHidden;
+  }
+  
 }

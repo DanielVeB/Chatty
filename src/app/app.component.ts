@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'chatty';
+
+  showMain: boolean = true;
+  showAdmin: boolean = false;
+  showUser: boolean = false;
+  showChat: boolean = true;
 }

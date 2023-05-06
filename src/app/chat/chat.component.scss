@@ -1,0 +1,86 @@
+html, body{
+    height:100%;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: row;
+    background-color: aqua;
+    flex: 1;
+}
+
+.chat-navigation {
+    background-color: red;
+    flex-shrink: 0;
+    min-width: 200px;
+}
+
+.chat-content {
+    flex: 1;
+    overflow: auto;
+}
+
+button {
+    display: none;
+    font-size: 1.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+@media (max-width: 768px) {
+    .chat-navigation {
+        min-width: 0px;
+    }
+    button {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 4rem);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    nav li {
+        margin: 1rem 0;
+    }
+
+    nav a {
+        font-size: 2rem;
+    }
+
+    nav[hidden] {
+        transform: translateX(0);
+    }
+}

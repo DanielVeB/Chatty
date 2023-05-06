@@ -1,1 +1,12 @@
-<p>chat works!</p>
+<div class="chat-container">
+    <div class="chat-navigation">
+        <button (click)="toggleNav()">☰</button>
+        <app-navigation [hidden]="navHidden"></app-navigation>
+    </div>
+    <div class="chat-content">
+        <app-content></app-content>
+    </div>
+  </div>
+
+
+  
