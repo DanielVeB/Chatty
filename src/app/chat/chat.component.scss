@@ -5,19 +5,19 @@ html, body{
 .chat-container {
     display: flex;
     flex-direction: row;
-    background-color: aqua;
     flex: 1;
 }
 
 .chat-navigation {
-    background-color: red;
     flex-shrink: 0;
-    min-width: 200px;
+    min-width: 300px;
+    background-color: #3A0CA3;
 }
 
 .chat-content {
     flex: 1;
     overflow: auto;
+    background-color: #353740;
 }
 
 button {

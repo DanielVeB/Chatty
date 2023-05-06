@@ -1,3 +1,35 @@
-p {
-    background-color: greenyellow;
+
+.messages-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.messages{
+    flex:1
+}
+
+.input-message{
+    flex-grow: 0;
+    padding-bottom: 30px;
+}
+
+.message{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    margin: 0;
+}
+
+.bot-message{
+    background-color:#6e6e80 ;
+}
+
+.user-message{
+    background-color: #353740;
+}
+
+p{
+    margin: 0;
 }
