@@ -4,6 +4,7 @@ import { ChatComponent } from './chat.component';
 import { ChatRoutingModule } from './chat-routing.module';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ContentComponent } from './content/content.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -15,7 +16,8 @@ import { ContentComponent } from './content/content.component';
   ],
   imports: [
     CommonModule,
-    ChatRoutingModule
+    ChatRoutingModule,
+    MatIconModule
   ],
   exports: []
 })

@@ -2,11 +2,13 @@
     <div class="messages">
         <div *ngFor="let message of chatMessages" class="message"
             [ngClass]="{'bot-message': message.author === 'bot', 'user-message': message.author === 'user'}">
-            <p>{{ message.author }} - {{ message.date | date }}</p>
             <p>{{ message.text }}</p>
         </div>
     </div>
     <div class="input-message">
-        <input type="text" placeholder="Write a message...">
+        <textarea type="text" rows="2" placeholder="Write a message..."></textarea>
+        <button mat-icon-button>
+            <mat-icon>send</mat-icon>
+          </button>
     </div>
 </div>

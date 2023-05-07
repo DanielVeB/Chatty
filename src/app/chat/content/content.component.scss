@@ -1,35 +1,79 @@
-
-.messages-container{
+.messages-container {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-.messages{
-    flex:1
+.messages {
+    flex: 1
 }
 
-.input-message{
+.input-message {
     flex-grow: 0;
     padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+
+    textarea {
+        resize: none;
+        border: none;
+        overflow: auto;
+        outline: none;
+        user-select: none;
+
+        text-align: left;
+        width: 50%;
+        max-width: 800px;
+        background-color: #404249;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: white;
+        border: none
+    }
+
+    button {
+        background-color: #404249;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover{
+        background-color: #4f5055;
+
+        mat-icon{
+            color: #1c1c1d;
+        }
+    }
+
+
 }
 
-.message{
+.message {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 20px;
     padding-bottom: 20px;
     margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        text-align: left;
+        width: 50%;
+        max-width: 800px;
+    }
 }
 
-.bot-message{
-    background-color:#6e6e80 ;
+.bot-message {
+    background: linear-gradient(to bottom, #6e6e80 97%, #353740);
 }
 
-.user-message{
-    background-color: #353740;
+.user-message {
+    background: linear-gradient(to bottom, #353740 97%, #6e6e80);
 }
 
-p{
+p {
     margin: 0;
 }
