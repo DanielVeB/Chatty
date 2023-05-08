@@ -2,82 +2,89 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    position: relative;
+
 }
 
 .messages {
     flex: 1;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 100px;  
+}
+
+.messages-hide{
+    position: fixed;
+    bottom: 0;
+    height: 140px;
+    width: 100%;
+    background-color: whitesmoke;
+
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, 
+    from(rgba(0,0,0,0)), to(whitesmoke));
 }
 
 .input-message {
-    flex-grow: 0;
-    padding-bottom: 30px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1200px;
+    width: 70%;
+    padding-bottom: 20px;
     display: flex;
-    justify-content: center;
+    box-sizing: border-box;
 
     textarea {
+        flex: 1;
         resize: none;
         border: none;
-        overflow: auto;
         outline: none;
-        user-select: none;
+        font-size: 16px;
+        padding: 10px;
+        box-sizing: border-box;
 
-        text-align: left;
-        width: 50%;
-        max-width: 800px;
-        background-color: #404249;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        color: white;
-        border: none
+        background: linear-gradient(to right, #283593 97%, #303F9F);
+        border-radius: 5px 0px 0px 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
 
     button {
-        background-color: #404249;
+        border-radius: 0px 5px 5px 0px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        background-color: #303F9F;
         border: none;
         cursor: pointer;
     }
 
-    button:hover{
-        background-color: #4f5055;
+    button:hover {
+        background-color: #4c5cd6;
 
-        mat-icon{
-            color: #1c1c1d;
+        mat-icon {
+            color: #f3f3f3;
         }
     }
-
-
 }
 
 .message {
-    width: 80%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    margin: 0;
+    width: 70%;
+    max-width: 1200px;
+    margin: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    p {
-        text-align: left;
-        width: 50%;
-        max-width: 800px;
+    p{
+        padding: 10px;
     }
 }
 
 .bot-message {
-    background: linear-gradient(to bottom, #6e6e80 97%, #353740);
+    background: linear-gradient(to bottom, #4527A0 97%, #512DA8);
 }
 
 .user-message {
-    background: linear-gradient(to bottom, #353740 97%, #6e6e80);
-}
-
-p {
-    margin: 0;
+    background: linear-gradient(to bottom, #283593 97%, #303F9F);
 }

@@ -1,6 +1,24 @@
+
+.header{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p{
+    font-family: 'Bruno Ace SC', cursive;
+    font-size: large;
+    padding-top: 10px;
+  }
+}
+
+
+
+
+
 ul {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
   
   li {
@@ -10,8 +28,6 @@ ul {
   
   a {
     display: inline-block;
-    padding: 8px 16px;
-    margin-right: 16px;
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
