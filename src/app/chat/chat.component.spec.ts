@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ChatComponent } from './chat.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { ContentComponent } from './content/content.component';
+import { MatIconModule } from '@angular/material/icon';
 
 describe('ChatComponent', () => {
   let component: ChatComponent;
@@ -8,7 +11,11 @@ describe('ChatComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ChatComponent]
+      declarations: [
+        ChatComponent,
+        NavigationComponent,
+        ContentComponent],
+      imports: [MatIconModule]
     });
     fixture = TestBed.createComponent(ChatComponent);
     component = fixture.componentInstance;

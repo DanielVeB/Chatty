@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ContentComponent } from './content.component';
+import { MatIconModule } from '@angular/material/icon';
 
 describe('ContentComponent', () => {
   let component: ContentComponent;
@@ -8,8 +9,9 @@ describe('ContentComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ContentComponent]
-    });
+      declarations: [ContentComponent],
+      imports: [MatIconModule]
+    }).compileComponents();
     fixture = TestBed.createComponent(ContentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
