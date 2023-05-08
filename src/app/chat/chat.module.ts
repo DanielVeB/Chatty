@@ -5,6 +5,7 @@ import { ChatRoutingModule } from './chat-routing.module';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ContentComponent } from './content/content.component';
 import { MatIconModule } from '@angular/material/icon';
+import { ResizableTextAreaDirective } from './resizable.textarea.directive';
 
 
 
@@ -12,7 +13,8 @@ import { MatIconModule } from '@angular/material/icon';
   declarations: [
     ChatComponent,
     NavigationComponent,
-    ContentComponent
+    ContentComponent,
+    ResizableTextAreaDirective
   ],
   imports: [
     CommonModule,
