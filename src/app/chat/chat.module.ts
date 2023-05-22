@@ -6,6 +6,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ContentComponent } from './content/content.component';
 import { MatIconModule } from '@angular/material/icon';
 import { ResizableTextAreaDirective } from './resizable.textarea.directive';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -19,7 +20,8 @@ import { ResizableTextAreaDirective } from './resizable.textarea.directive';
   imports: [
     CommonModule,
     ChatRoutingModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
   ],
   exports: []
 })

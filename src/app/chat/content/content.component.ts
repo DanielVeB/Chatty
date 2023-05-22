@@ -10,12 +10,19 @@ import { ChatMessageDto } from '../dto/chat-message-dto';
 export class ContentComponent implements OnInit {
 
   chatMessages: ChatMessageDto[] = [];
+  
+  userinput: string = '';
 
   constructor(private chatService: ChatService) { }
 
   ngOnInit() {
     this.chatMessages = this.chatService.getMessages();
     console.log(this.chatMessages)
+  }
+
+  send() {
+    console.log("Send " + this.userinput)
+    this.userinput = '';
   }
 
 }
