@@ -8,11 +8,11 @@
             <div>
                 <p>{{ message.text }}</p>
                 <div *ngIf="message.author === 'bot'" class="message-additional">
-                    <button>
-                        <i class="material-icons">thumb_up</i>
+                    <button (click)="like(message)">
+                        <i  [ngClass]="{'clicked': message.liked === true}" class="material-icons">thumb_up</i>
                     </button>
-                    <button>
-                        <i class="material-icons">thumb_down</i>
+                    <button (click)="unlike(message)">
+                        <i [ngClass]="{'clicked': message.unliked === true}" class="material-icons">thumb_down</i>
                     </button>
                 </div>
             </div>

@@ -44,6 +44,15 @@ export class ContentComponent implements OnInit {
 
   }
 
+  like(message: ChatMessageDto){
+    message.liked = !message.liked
+  }
+
+  unlike(message: ChatMessageDto){
+    message.unliked = !message.unliked
+
+  }
+
   private addToMessages(){
     this.chatMessages.push(new ChatMessageDto(Author.User, new Date(),this.userinput))
   }
