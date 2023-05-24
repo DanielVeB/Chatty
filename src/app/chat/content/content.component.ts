@@ -33,10 +33,6 @@ export class ContentComponent implements OnInit {
     this.scrollToBottom()
 
   }
-  addResponse(response: any) {
-    
-
-  }
 
   private addToMessages(){
     this.chatMessages.push(new ChatMessageDto(Author.User, new Date(),this.userinput))

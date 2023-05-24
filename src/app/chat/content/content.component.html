@@ -10,7 +10,7 @@
     </div>
     <div class="input-message">
         <textarea rows="2" appTextareaAutoresize placeholder="Write a message..." [(ngModel)]="userinput" (keyup.enter)="send()"></textarea>
-        <button mat-icon-button>
+        <button mat-icon-button (click)="send()">
             <mat-icon>send</mat-icon>
           </button>
     </div>
