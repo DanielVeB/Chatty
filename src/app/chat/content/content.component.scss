@@ -118,10 +118,18 @@
 
 .bot-message {
     background: linear-gradient(to bottom, #6a4ac4 97%, #34388a);
+
+    .hexagon-container{
+        background-color: #353993;
+    }
 }
 
 .user-message {
-    background: linear-gradient(to bottom, #E5D4FC 97%, #dcc6f8);
+    background: linear-gradient(to bottom, #AE1CC6 97%, #AE1CC6);
+
+    .hexagon-container{
+        background-color: #E5D4FC;
+    }
 }
 
 
@@ -130,8 +138,7 @@
   height: 48px;
   border-radius: 50%;
   margin: 5px;
-  background-color: #000; 
-    background-color: red;
+  
 
 }
 
