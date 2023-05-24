@@ -7,6 +7,7 @@ import { ContentComponent } from './content/content.component';
 import { MatIconModule } from '@angular/material/icon';
 import { ResizableTextAreaDirective } from './resizable.textarea.directive';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     ChatRoutingModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   exports: []
 })

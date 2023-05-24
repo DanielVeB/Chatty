@@ -1,5 +1,5 @@
-<div class="messages-container">
-    <div class="messages">
+<div class="messages-container" >
+    <div class="messages" #scrollContainer>
         <div *ngFor="let message of chatMessages" class="message"
             [ngClass]="{'bot-message': message.author === 'bot', 'user-message': message.author === 'user'}">
             <p>{{ message.text }}</p>
