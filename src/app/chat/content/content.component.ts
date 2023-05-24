@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ChatService } from '../chat.service';
 import { Author, ChatMessageDto } from '../dto/chat-message-dto';
 import { HttpClient } from '@angular/common/http';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-content',
@@ -16,10 +17,19 @@ export class ContentComponent implements OnInit {
   
   userinput: string = '';
   
+  thumbsUp: SafeResourceUrl | undefined;
+  thumbsDown: SafeResourceUrl | undefined;
 
-  constructor(private http: HttpClient, private chatService: ChatService) { }
+
+  constructor(private sanitizer: DomSanitizer, private http: HttpClient, private chatService: ChatService) { }
 
   ngOnInit() {
+    const thumbsUpPath = 'assets/icons8-thumbs-up-50.png'; // Path to your SVG icon file
+    const thumbsDownPath = 'assets/icons8-thumbs-down-50.png'; // Path to your SVG icon file
+
+    this.thumbsUp = this.sanitizer.bypassSecurityTrustResourceUrl(thumbsUpPath);
+    this.thumbsDown = this.sanitizer.bypassSecurityTrustResourceUrl(thumbsDownPath);
+
     this.chatMessages = this.chatService.getMessages();
     console.log(this.chatMessages)
   }

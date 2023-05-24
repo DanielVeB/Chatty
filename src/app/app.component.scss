@@ -8,8 +8,8 @@
   #header {
     flex-shrink: 0;
     width: 100%;
-    background: linear-gradient(to right, #1A237E 50%, #311B92);
-    color: #fff;
+    background: linear-gradient(to right, #DAE3F3 50%, #c4d5f1);
+    color: #6531F7;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -23,8 +23,8 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    background-color: whitesmoke;
-
+    background-color: #D257E7;
+    background-image: linear-gradient(147deg, #D257E7 0%,#A5A2E8 74%,#A5A2E8 91%);
   }
 
   :host ::ng-deep app-chat,app-admin {

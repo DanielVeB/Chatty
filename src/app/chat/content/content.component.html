@@ -1,17 +1,31 @@
-<div class="messages-container" >
+<div class="messages-container">
     <div class="messages" #scrollContainer>
         <div *ngFor="let message of chatMessages" class="message"
             [ngClass]="{'bot-message': message.author === 'bot', 'user-message': message.author === 'user'}">
-            <p>{{ message.text }}</p>
+            <div class="hexagon-container">
+                <div class="hexagon"></div>
+            </div>
+            <div>
+                <p>{{ message.text }}</p>
+                <div *ngIf="message.author === 'bot'" class="message-additional">
+                    <button>
+                        <i class="material-icons">thumb_up</i>
+                    </button>
+                    <button>
+                        <i class="material-icons">thumb_down</i>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
     <div class="messages-hide">
 
     </div>
     <div class="input-message">
-        <textarea rows="2" appTextareaAutoresize placeholder="Write a message..." [(ngModel)]="userinput" (keyup.enter)="send()"></textarea>
+        <textarea rows="2" appTextareaAutoresize placeholder="Write a message..." [(ngModel)]="userinput"
+            (keyup.enter)="send()"></textarea>
         <button mat-icon-button (click)="send()">
             <mat-icon>send</mat-icon>
-          </button>
+        </button>
     </div>
 </div>
