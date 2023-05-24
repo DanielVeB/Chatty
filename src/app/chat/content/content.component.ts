@@ -68,7 +68,7 @@ export class ContentComponent implements OnInit {
   }
 
   sendMessageToBackend(message: string) {
-    this.http.post('http://localhost:3000/messages', { message: message }).subscribe(
+    this.http.post('http://localhost:5000/messages', { message: message }).subscribe(
       (response: any) => {
         this.chatMessages.push(new ChatMessageDto(Author.Bot, new Date(),response.text))
       },
