@@ -126,13 +126,11 @@
 
 
 .hexagon-container {
-    max-width: 64px;
-    max-height: 64px;
-    width: 20%;
-    height: 100%;
-    /* Controls the aspect ratio of the hexagon (height/width) */
-    position: relative;
-    overflow: hidden;
+    width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin: 5px;
+  background-color: #000; 
     background-color: red;
 
 }
