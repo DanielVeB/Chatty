@@ -19,7 +19,6 @@
 .messages-hide {
     position: fixed;
     bottom: 0;
-    height: 140px;
     width: 100%;
     background: linear-gradient(to right, #BDD7EE, #D257E7);
 
@@ -33,7 +32,7 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    max-width: 1200px;
+    max-width: 800px;
     width: 70%;
     padding-bottom: 20px;
     display: flex;
@@ -73,8 +72,8 @@
 }
 
 .message {
-    width: 70%;
-    max-width: 1000px;
+    width: 60%;
+    max-width: 800px;
     margin: 10px;
     box-sizing: border-box;
     border-radius: 5px;
@@ -142,7 +141,10 @@
 
 @media (min-width: 800px) {
     .user-message {
-        margin-left: 15%;
+        margin-left: 25%;
+    }
+    .bot-message {
+        margin-left: 5%;
     }
   }
 
