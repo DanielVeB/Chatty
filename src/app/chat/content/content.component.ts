@@ -51,10 +51,16 @@ export class ContentComponent implements OnInit {
 
   like(message: ChatMessageDto){
     message.liked = !message.liked
+    if(message.unliked == true){
+      message.unliked = false;
+    }
   }
 
   unlike(message: ChatMessageDto){
     message.unliked = !message.unliked
+    if(message.liked == true){
+      message.liked = false;
+    }
 
   }
 

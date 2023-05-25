@@ -6,6 +6,7 @@
 }
 
 .messages {
+    margin-top: 10px;
     overflow-y: auto;  /* Enable vertical scrolling */
     height: 100%; 
     flex: 1;
@@ -47,7 +48,7 @@
         padding: 10px;
         box-sizing: border-box;
 
-        background: linear-gradient(to right, #283593 97%, #303F9F);
+        background: linear-gradient(to right, #34388a 87%, #6a4ac4);
         border-radius: 5px 0px 0px 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         color: #f3f3f3;
@@ -56,14 +57,14 @@
     button {
         border-radius: 0px 5px 5px 0px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        background-color: #303F9F;
+        background-color: #6a4ac4;
         border: none;
         cursor: pointer;
     }
 
 
     button:hover {
-        background-color: #4c5cd6;
+        background-color: #3a3fa5;
 
         mat-icon {
             color: #f3f3f3;
@@ -88,23 +89,21 @@
     flex-direction: row;
 }
 
-.clicked{
-    color: white;
-}
-
 .message-additional {
+    float: right;
     button {
-        max-width: 16px;
-        max-height: 16px;
+        max-width: 30px;
+        max-height: 30px;
         background-color: transparent;
         border: none;
-        margin-left: 50px;
+        margin-right: 15px;
         padding: 0;
 
         i {
             max-width: 16px;
             height: auto;
         }
+
     }
 
     button:hover{
@@ -115,6 +114,15 @@
         }
     }
 }
+
+.like-clicked{
+    color: green;
+}
+
+.unlike-clicked{
+    color: red;
+}
+
 
 .bot-message {
     background: linear-gradient(to bottom, #6a4ac4 97%, #34388a);
@@ -148,15 +156,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 12px 14px rgba(0, 0, 0, 0.2);
+
 
 }
-
-//   .hexagon {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     background-color: rgba(255, 0, 0, 0.5); /* Adjust the alpha value (last parameter) to control the transparency */
-//     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-//   }
