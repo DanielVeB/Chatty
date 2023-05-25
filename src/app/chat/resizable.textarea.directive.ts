@@ -10,7 +10,6 @@ export class ResizableTextAreaDirective {
   resize() {
   
     const textarea = this.elementRef.nativeElement;
-    console.log(textarea.value)
     if(textarea.value == null){
       textarea.rows = 2
       return
@@ -20,11 +19,9 @@ export class ResizableTextAreaDirective {
     const newRows = Math.min(currentRows + 1, 10);
 
     textarea.rows = newRows;
-    console.log('updated row size: ' + this.elementRef.nativeElement.rows)
   }
 
   clear() {
-    console.log('CLEAR')
     const textarea = this.elementRef.nativeElement;
     textarea.rows = 2;
 
@@ -32,7 +29,6 @@ export class ResizableTextAreaDirective {
   
   @HostListener('input', ['$event'])
   onInput(event: Event) {
-    console.log(event)
     this.resize();
   }
   

@@ -3,6 +3,9 @@
         <div *ngFor="let message of chatMessages" class="message"
             [ngClass]="{'bot-message': message.author === 'bot', 'user-message': message.author === 'user'}">
             <div class="hexagon-container">
+                <img *ngIf="message.author === 'bot'" [src]="botLogo" alt="Bot">
+                <img *ngIf="message.author === 'user'" [src]="userLogo" alt="User">
+
             </div>
             <div>
                 <p>{{ message.text }}</p>

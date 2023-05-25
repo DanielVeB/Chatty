@@ -11,25 +11,30 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 export class ContentComponent implements OnInit {
   
-  @ViewChild('scrollContainer') private scrollContainer!: ElementRef;
-
+  @ViewChild('scrollContainer', { static: true }) private scrollContainer!: ElementRef;
+  
   chatMessages: ChatMessageDto[] = [];
   
   userinput: string = '';
   
   thumbsUp: SafeResourceUrl | undefined;
   thumbsDown: SafeResourceUrl | undefined;
-
+  userLogo: SafeResourceUrl | undefined;
+  botLogo: SafeResourceUrl | undefined;
 
   constructor(private sanitizer: DomSanitizer, private http: HttpClient, private chatService: ChatService) { }
 
   ngOnInit() {
-    const thumbsUpPath = 'assets/icons8-thumbs-up-50.png'; // Path to your SVG icon file
-    const thumbsDownPath = 'assets/icons8-thumbs-down-50.png'; // Path to your SVG icon file
+    const thumbsUpPath = 'assets/icons8-thumbs-up-50.png'; 
+    const thumbsDownPath = 'assets/icons8-thumbs-down-50.png'; 
+
+    const userPath = 'assets/icons8-user-48.png'; 
+    const bothPath = 'assets/icons8-bot-48.png'; 
 
     this.thumbsUp = this.sanitizer.bypassSecurityTrustResourceUrl(thumbsUpPath);
     this.thumbsDown = this.sanitizer.bypassSecurityTrustResourceUrl(thumbsDownPath);
-
+    this.userLogo = this.sanitizer.bypassSecurityTrustResourceUrl(userPath);
+    this.botLogo = this.sanitizer.bypassSecurityTrustResourceUrl(bothPath);
     this.chatMessages = this.chatService.getMessages();
     console.log(this.chatMessages)
   }
@@ -58,19 +63,19 @@ export class ContentComponent implements OnInit {
   }
 
   scrollToBottom(): void {
-    try {
+    console.log("SCROOLL BOTTOM")
+      const container = this.scrollContainer.nativeElement;
       setTimeout(() => {
-        this.scrollContainer.nativeElement.scrollTop = this.scrollContainer.nativeElement.scrollHeight;
+        container.scrollTop = container.scrollHeight - 500;
+        container.scrollIntoView({ behavior: 'smooth', block: 'end' });
       }, 0);
-    } catch (err) {
-      console.log(err);
-    }
   }
 
   sendMessageToBackend(message: string) {
     this.http.post('http://localhost:5000/messages', { message: message }).subscribe(
       (response: any) => {
         this.chatMessages.push(new ChatMessageDto(Author.Bot, new Date(),response.text))
+        this.scrollToBottom()
       },
       (error: any) => {
         console.error('Error sending message to backend:', error);

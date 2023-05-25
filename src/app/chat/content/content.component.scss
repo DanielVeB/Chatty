@@ -6,9 +6,9 @@
 }
 
 .messages {
-    overflow: auto;
+    overflow-y: auto;  /* Enable vertical scrolling */
+    height: 100%; 
     flex: 1;
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,7 +51,6 @@
         border-radius: 5px 0px 0px 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         color: #f3f3f3;
-
     }
 
     button {
@@ -74,14 +73,15 @@
 
 .message {
     width: 70%;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 10px;
     box-sizing: border-box;
     border-radius: 5px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
 
     p {
         padding: 10px;
+        white-space: pre-line;
     }
 
     display: flex;
@@ -120,7 +120,7 @@
     background: linear-gradient(to bottom, #6a4ac4 97%, #34388a);
 
     .hexagon-container{
-        background-color: #353993;
+        background-color: #8062d3;
     }
 }
 
@@ -128,17 +128,26 @@
     background: linear-gradient(to bottom, #AE1CC6 97%, #AE1CC6);
 
     .hexagon-container{
-        background-color: #E5D4FC;
+        background-color: #dca6f1;
     }
 }
 
+@media (min-width: 800px) {
+    .user-message {
+        margin-left: 15%;
+    }
+  }
+
 
 .hexagon-container {
-    width: 48px;
-  height: 48px;
-  border-radius: 50%;
+    width: 64px;
+  height: 64px;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   margin: 5px;
-  
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
